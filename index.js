@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(express.static("public"));
 
-app.get("/portfolio", (req, res)=>{
+app.get("/", (req, res)=>{
     res.render("index.ejs");
 });
 
