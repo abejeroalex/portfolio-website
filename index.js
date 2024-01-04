@@ -1,7 +1,9 @@
+import "dotenv/config";
 import express from "express";
 
 const app = express();
-const port = 3000;
+
+console.log(process.env.PORT);
 
 app.use(express.static("public"));
 
@@ -9,6 +11,6 @@ app.get("/", (req, res)=>{
     res.render("index.ejs");
 });
 
-app.listen(port, ()=>{
-    console.log(`This app is listening to port ${port}.`);
+app.listen(process.env.PORT, ()=>{
+    console.log(`This app is running on port ${process.env.PORT}.`);
 });
