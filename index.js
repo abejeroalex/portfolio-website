@@ -3,8 +3,6 @@ import express from "express";
 
 const app = express();
 
-console.log(process.env.PORT);
-
 app.use(express.static("public"));
 
 app.get("/", (req, res)=>{
